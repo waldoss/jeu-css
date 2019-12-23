@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+*{
+  font-family: 'Press Start 2P', cursive;
+}
+
+em{
+  font-style: italic;
+}
+
+div.backimg img{
+  color: white;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.jeu{
+  display: flex;
+  width: 640px; /*320*/
+  height: 576px; /*288*/
+  background-color: black;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+div.lieu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 571px;
+  width: 640px;
+}
+
+.backimg img{
+  display: flex;
+  align-items: flex-start;
+  height: 400px;
+  width: 620px;
+}
+
+.sprite{
+  position: absolute;
+  display: grid;
+  height: 400px;
+  width: 620px;
+  grid-template-columns: repeat(20,5%);
+  grid-template-rows: repeat(20,5%);
+}
+
+.sprite#chandelier a{
+  width: 100%;
+  grid-area: 13/13/13/13;
+}
+
+#chandelier img{
+  opacity: 0;
+  position:relative;
+  width: 100%;
+  height: 300%;
+  z-index: 5;
+}
+
+#chandelier:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "C'est un chandelier";
+  background-color: white;
+  /* background-image: url(https://zupimages.net/up/19/51/gx9k.png); */
+  height: auto;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#chandelier_nuit a{
+  width: 100%;
+  grid-area: 13/13/13/13;
+}
+
+#chandelier_nuit img{
+  opacity: 0;
+  position:relative;
+  width: 100%;
+  height: 300%;
+  z-index: 5;
+}
+
+#chandelier_nuit:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "La lumière de ces bougies vous sauve la vie. En le manipulant vous avec remarquez que l'inscription “1F” était gravé sous son support.";
+  background-color: white;
+  height: auto;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#portrait a{
+  width: 100%;
+  grid-area: 10/10/10/10;
+}
+
+#portrait img{
+  opacity: 0;
+  width: 200%;
+  height: 300%;
+}
+
+#portrait:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "C'est un très beau portrait, ou peut-être est-ce un miroir ?";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#statue a{
+  width: 100%;
+  grid-area: 6/6/17/6;
+}
+
+#statue img{
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#statue:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Sur cette jolie statue vous pouvez lire “Alexandre le Grand, Roi de Macédoine”. L'inscription “4-O” semble avoir été gravé plus tard.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#tableau_sejour a{
+  width: 100%;
+  grid-area: 7/17/7/17;
+}
+
+#tableau_sejour img{
+  opacity: 0;
+  width: 200%;
+  height: 300%;
+}
+
+#tableau_sejour:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Un portrait de l'hôte. C'est signé “Léa Pauzcenn, 2-C”.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#frigo a{
+  width: 100%;
+  grid-area: 2/2/2/2;
+}
+
+#frigo img{
+  opacity: 0;
+  width: 300%;
+  height: 1800%;
+}
+
+#frigo:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "En ouvrant le frigo vous trouvez une collection horrifiante de poche de sang. Sur les étiquettes vous pouvez lire “A+”,“O-”,“AB+” et même “7A”.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#vin1 a{
+  width: 100%;
+  grid-area: 11/1/11/1;
+}
+
+#vin1 img{
+  opacity: 0;
+  position: relative;
+  width: 200%;
+  height: 800%;
+  z-index: 1;
+}
+
+#vin1:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Vous pouvez lire “Romanée-Conti, 1975” sur les bouteilles.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#vin2 a{
+  width: 100%;
+  grid-area: 9/7/9/7;
+}
+
+#vin2 img{
+  opacity: 0;
+  position: relative;
+  width: 200%;
+  height: 400%;
+  z-index: 1;
+}
+
+#vin2:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Vous pouvez lire “Henri Jayer, 1978” sur les bouteilles.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#vin3 a{
+  width: 100%;
+  grid-area: 7/11/7/11;
+}
+
+#vin3 img{
+  opacity: 0;
+  position: relative;
+  width: 200%;
+  height: 600%;
+  z-index: 1;
+}
+
+#vin3:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Vous pouvez lire “Leflaive Montrachet, 3-I” sur les bouteilles.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#baignoire a{
+  width: 100%;
+  grid-area: 13/6/13/6;
+}
+
+#baignoire img{
+  opacity: 0;
+  width: 500%;
+  height: 700%;
+}
+
+#baignoire:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "“5-B” est gravé au fond de la baignoire.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#baignoire_nuit a{
+  width: 100%;
+  grid-area: 13/6/13/6;
+}
+
+#baignoire_nuit img{
+  opacity: 0;
+  width: 500%;
+  height: 700%;
+}
+
+#baignoire_nuit:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Des carottes, tomates et oignons flottent dans ce qui semble être un bouillon.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+.sprite#pot_de_fleur a{
+  width: 100%;
+  grid-area: 13/5/13/5;
+}
+
+#pot_de_fleur img{
+  opacity: 0;
+  width: 200%;
+  height: 200%;
+}
+
+#pot_de_fleur:target::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Sous le pot de fleur vous trouvez une feuille sur lequel est écrit “5B”. À son dos vous pouvez lire “suite de 135467223”.";
+  background-color: white;
+  width: 100%;
+  animation: appear 1s;
+}
+
+button{
+  padding: 0;
+  border: 0;
+  background-image: url(https://zupimages.net/up/19/50/y32m.png);
+  color: black;
+  background-color: #11ffee00;
+  font-size: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 620px;
+  height: 40px;
+}
+
+button:hover{
+
+  background-image: url(https://zupimages.net/up/19/50/9mvu.png);
+}
+
+button:active{
+  color: white;
+}
+
+input[type=text]{
+  padding: 0;
+  border: 0;
+  background-image: url(https://zupimages.net/up/19/51/56bq.png);
+  color: white;
+  background-color: #11ffee00;
+  font-size: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 620px;
+  height: 40px;
+}
+
+.text{
+  width: 320px;
+  height: 576px;
+  color: white;
+  background-color: black;
+  overflow: scroll;
+}
+
+div.text p{
+  margin: 10px;
+}
